@@ -46,10 +46,10 @@ export function Navbar({ onOpenResume, onOpenContact }: NavbarProps) {
           onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
           className="group text-left flex items-center gap-2.5 focus:outline-none cursor-pointer"
         >
-          <img src="/logo.png" alt="rapidUI.dev logo" className="w-8 h-8 rounded-lg object-contain shadow-sm group-hover:opacity-90 transition-opacity" />
+          <img src="/logo.png" alt="The Rapid UI logo" className="w-8 h-8 rounded-lg object-contain shadow-sm group-hover:opacity-90 transition-opacity" />
           <div>
             <span className="font-bold text-slate-900 text-base tracking-tight block leading-none">
-              rapidUI.dev
+              The Rapid UI
             </span>
             <span className="text-[11px] text-slate-500 font-medium tracking-wide block mt-0.5">
               Lead UI/UX Engineer

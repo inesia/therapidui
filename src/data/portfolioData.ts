@@ -44,107 +44,145 @@ export const PORTFOLIO_DATA = {
   },
   
   techStack: [
-    { name: "Next.js", category: "Framework", icon: "Layers", level: "Expert" },
-    { name: "Tailwind CSS", category: "Styling", icon: "Palette", level: "Expert" },
-    { name: "React", category: "Library", icon: "Code2", level: "Expert" },
-    { name: "TypeScript", category: "Language", icon: "FileCode", level: "Expert" },
-    { name: "Figma", category: "Design Tool", icon: "Figma", level: "Expert" },
-    { name: "Framer Motion", category: "Animation", icon: "Sparkles", level: "Advanced" },
-    { name: "Design Tokens", category: "Architecture", icon: "Sliders", level: "Expert" },
-    { name: "Node.js", category: "Backend/CLI", icon: "Server", level: "Intermediate" },
-    { name: "Storybook", category: "Documentation", icon: "BookOpen", level: "Advanced" },
-    { name: "GraphQL / REST", category: "API Integration", icon: "Globe", level: "Advanced" },
+    { name: "Next.js", category: "Framework", icon: "Layers", level: "Working Familiarity" },
+    { name: "React", category: "Library", icon: "Code2", level: "Working Familiarity" },
+    { name: "Tailwind CSS", category: "Styling", icon: "Palette", level: "Working Familiarity" },
+    { name: "JavaScript", category: "Language", icon: "FileCode", level: "Working Familiarity" },
+    { name: "Capacitor", category: "Mobile", icon: "Globe", level: "Working Familiarity" },
+    { name: "Figma", category: "Design Tool", icon: "Figma", level: "Design Tools" },
+    { name: "Adobe Photoshop", category: "Design Tool", icon: "Palette", level: "Design Tools" },
+    { name: "Adobe Illustrator", category: "Design Tool", icon: "Palette", level: "Design Tools" },
+    { name: "Git", category: "Workflow", icon: "Server", level: "Development Workflow" },
+    { name: "Cursor & AI Agents", category: "Workflow", icon: "Sparkles", level: "Development Workflow" },
   ],
 
   projects: [
     {
-      id: "enterprise-media-ecosystem",
-      title: "Enterprise Media Ecosystem (Promedia)",
-      subtitle: "Multi-Brand Design System & Headless Content Platform",
-      category: "Design System & Frontend Platform",
-      description: "Engineered the scalable UI/UX architecture for a massive digital media ecosystem supporting over 1,300+ independent publishers. Delivered production-ready UI components to ensure seamless performance and a unified design system across a high-traffic network.",
-      fullDescription: "Engineered the scalable UI/UX architecture for a massive digital media ecosystem supporting over 1,300+ independent publishers. Delivered production-ready UI components to ensure seamless performance and a unified design system across a high-traffic network.",
-      tags: ["Next.js", "Tailwind CSS", "UI Architecture", "Figma"],
+      id: "lsp-iai",
+      title: "LSP IAI — Professional Certification Platform",
+      subtitle: "Web Application · Workflow UI · Dashboard · Rapid Prototyping | In Progress",
+      category: "Web Application",
+      description: "Translating complex operational requirements and multi-step user journeys into functional browser-based prototypes. Refining responsive web application UI and interface flows through iterative development to support validation and handoff.",
+      fullDescription: "Translating complex operational requirements and multi-step user journeys into functional browser-based prototypes. Refining responsive web application UI and interface flows through iterative development to support validation and handoff.",
+      tags: ["React", "Next.js", "Tailwind CSS", "UI Architecture"],
       metrics: [
-        { label: "Independent Publishers", value: "1,300+" },
-        { label: "Core Web Vitals", value: "99/100" },
-        { label: "Design Token Adoption", value: "100%" }
+        { label: "Status", value: "In Progress" },
+        { label: "Platform", value: "Web App" },
+        { label: "Focus", value: "Dashboard" }
       ],
       keyFeatures: [
-        "Automated Figma-to-Tailwind design token syncing via GitHub Actions.",
-        "Dynamic theme provider supporting instant dark/light/brand mode switches.",
-        "Accessible, high-performance reader layout engine supporting millions of monthly visits."
+        "Complex operational requirements translated into browser-based prototypes.",
+        "Multi-step user journeys mapped out for certification workflows.",
+        "Iterative development supporting validation and seamless handoff."
       ],
-      architectureOverview: "Leveraged Next.js App Router with server-driven component caching and Tailwind CSS CSS variables for dynamic runtime brand swapping.",
+      architectureOverview: "React and Tailwind CSS for responsive components, accelerating the validation phase through functional prototyping.",
       mockupColor: "from-slate-100 to-teal-50/40 border-teal-100",
-      specCodeSnippet: `// Design Token Swapper Example
-export const themeTokenConfig = {
-  brandPrimary: "var(--brand-primary, #0D9488)",
-  surfaceCanvas: "var(--surface-canvas, #FCFCFC)",
-  textPrimary: "var(--text-primary, #0F172A)",
-  fontFamily: "var(--font-sans, 'Plus Jakarta Sans')",
+      specCodeSnippet: `// Dashboard Workflow Validation
+export const CertificationFlow = () => {
+  return (
+    <WorkflowProvider>
+      <StepNavigation />
+      <FormRenderer schema={certificateSchema} />
+    </WorkflowProvider>
+  );
 };`
     },
     {
-      id: "b2b-banking-value-chain",
-      title: "B2B Banking Value Chain (Bank BSI)",
-      subtitle: "High-Frequency Financial Dashboard & Treasury Engine",
-      category: "Fintech & Data Visualization",
-      description: "Designed and developed specialized B2B digital platforms for Bank Syariah Indonesia. Created the complex UI for the Business Value Chain system and MSME empowerment portal, translating intricate banking workflows into intuitive, developer-ready front-end prototypes.",
-      fullDescription: "Designed and developed specialized B2B digital platforms for Bank Syariah Indonesia. Created the complex UI for the Business Value Chain system and MSME empowerment portal, translating intricate banking workflows into intuitive, developer-ready front-end prototypes.",
-      tags: ["React", "HTML/CSS", "Enterprise UX", "Dashboard Design"],
+      id: "investihub",
+      title: "InvestiHub — Dashboard Prototype",
+      subtitle: "Web Application · Dashboard UI · Rapid Prototyping | In Progress",
+      category: "Dashboard UI",
+      description: "Translating data-oriented workflows into structured dashboard UI concepts. Developing responsive interfaces and interactive functional prototypes for ongoing product evaluation.",
+      fullDescription: "Translating data-oriented workflows into structured dashboard UI concepts. Developing responsive interfaces and interactive functional prototypes for ongoing product evaluation.",
+      tags: ["Dashboard", "React", "Data Visualization"],
       metrics: [
-        { label: "Task Completion Speed", value: "+38%" },
-        { label: "User Error Rate", value: "-62%" },
-        { label: "Active Enterprise Users", value: "120K+" }
+        { label: "Status", value: "In Progress" },
+        { label: "Data Flows", value: "Complex" },
+        { label: "Focus", value: "UI/UX" }
       ],
       keyFeatures: [
-        "Keyboard-driven rapid transaction entry modal with real-time validation.",
-        "Virtualization engine for rendering 10,000+ transaction rows without lag.",
-        "Accessible color-contrast palette optimized for 8-hour daily trader usage."
+        "Data-oriented workflows designed for clarity and efficiency.",
+        "Interactive functional prototypes for ongoing evaluation.",
+        "Responsive interfaces adaptable to various screen sizes."
       ],
-      architectureOverview: "React 19 virtual DOM with memoized chart layers, WebSockets data streaming, and custom accessible ARIA data tables.",
+      architectureOverview: "Component-driven dashboard architecture focusing on responsive layouts and data visualization states.",
       mockupColor: "from-slate-100 to-slate-200/50 border-slate-200",
-      specCodeSnippet: `// High-Frequency Real-time Stream Hook
-const useLiquidityStream = (pairId: string) => {
-  const [rate, setRate] = useState<number>(0);
-  useEffect(() => {
-    const ws = new WebSocket(\`wss://api.bank.dev/stream/\${pairId}\`);
-    ws.onmessage = (e) => setRate(JSON.parse(e.data).rate);
-    return () => ws.close();
-  }, [pairId]);
-  return { rate };
+      specCodeSnippet: `// Data Table Implementation
+const DataTable = ({ data, columns }) => {
+  return (
+    <div className="overflow-x-auto rounded-lg border border-slate-200">
+      <Table>
+        <TableHeader columns={columns} />
+        <TableBody data={data} />
+      </Table>
+    </div>
+  );
 };`
     },
     {
-      id: "cross-platform-wellness-platform",
-      title: "Cross-Platform Wellness Platform (Wellnooz)",
-      subtitle: "Modern Wellness Application",
-      category: "Product Design & Web App",
-      description: "Spearheaded the rapid code-based prototyping for a modern wellness application. Utilized the latest front-end technologies to deliver a pixel-perfect, highly interactive cross-platform UI experience that dramatically accelerated the backend integration phase.",
-      fullDescription: "Spearheaded the rapid code-based prototyping for a modern wellness application. Utilized the latest front-end technologies to deliver a pixel-perfect, highly interactive cross-platform UI experience that dramatically accelerated the backend integration phase.",
-      tags: ["React 19", "Tailwind CSS v4", "Capacitor", "Mobile UI"],
+      id: "y-warrior",
+      title: "Y-Warrior — PWA Prototype",
+      subtitle: "Progressive Web App · Mobile-First UI · Functional Prototyping",
+      category: "Progressive Web App",
+      description: "Designed and developed a functional PWA prototype focusing on mobile-first user experience. Used AI-assisted rapid prototyping workflows to efficiently translate product concepts into responsive interface structures.",
+      fullDescription: "Designed and developed a functional PWA prototype focusing on mobile-first user experience. Used AI-assisted rapid prototyping workflows to efficiently translate product concepts into responsive interface structures.",
+      tags: ["PWA", "Mobile-First", "AI-Assisted"],
       metrics: [
-        { label: "User Engagement", value: "+54%" },
-        { label: "NPS Score", value: "72" },
-        { label: "Integration Speed", value: "3.2x faster" }
+        { label: "Type", value: "PWA" },
+        { label: "Approach", value: "Mobile-First" },
+        { label: "Workflow", value: "AI-Assisted" }
       ],
       keyFeatures: [
-        "Smooth, non-jarring state transitions using Framer Motion layout animations.",
-        "Cross-platform compatibility using modern Capacitor wrappers.",
-        "Integrated interactive tracking modules for wellness routines."
+        "Mobile-first user experience optimized for touch interactions.",
+        "AI-assisted rapid prototyping workflows for faster iteration.",
+        "Responsive interface structures mapped from product concepts."
       ],
-      architectureOverview: "Clean component hierarchy built with React, Tailwind CSS, and headless UI primitives compiled for cross-platform delivery.",
-      mockupColor: "from-slate-100 to-teal-50/30 border-slate-200",
-      specCodeSnippet: `// Dynamic Layout Transition for Wellness Tracking
-<motion.div 
-  layout 
-  transition={{ type: "spring", stiffness: 350, damping: 25 }}
-  className="p-6 bg-white rounded-2xl border border-slate-200/80 shadow-soft"
->
-  <WidgetHeader title="Daily Wellness" />
-  <TrackingChart data={wellnessData} />
-</motion.div>`
+      architectureOverview: "Progressive Web App leveraging service workers and mobile-optimized UI components.",
+      mockupColor: "from-slate-100 to-teal-50/30 border-teal-200",
+      specCodeSnippet: `// Mobile-First Navigation
+const BottomNav = () => {
+  return (
+    <nav className="fixed bottom-0 w-full bg-white border-t border-slate-200 pb-safe">
+      <div className="flex justify-around items-center h-16">
+        <NavItem icon={<Home />} label="Home" />
+        <NavItem icon={<Activity />} label="Workout" />
+        <NavItem icon={<User />} label="Profile" />
+      </div>
+    </nav>
+  );
+};`
+    },
+    {
+      id: "mofish-auctions",
+      title: "MoFish Auctions — PWA Prototype",
+      subtitle: "Progressive Web App · Mobile UI · Functional Prototyping",
+      category: "Progressive Web App",
+      description: "Created an interactive PWA prototype translating product requirements into a mobile-oriented interface. Developed functional interface flows to demonstrate product behavior beyond static UI screens.",
+      fullDescription: "Created an interactive PWA prototype translating product requirements into a mobile-oriented interface. Developed functional interface flows to demonstrate product behavior beyond static UI screens.",
+      tags: ["PWA", "Mobile UI", "Prototyping"],
+      metrics: [
+        { label: "Type", value: "PWA" },
+        { label: "Interface", value: "Mobile" },
+        { label: "Output", value: "Prototype" }
+      ],
+      keyFeatures: [
+        "Interactive PWA demonstrating real product behavior.",
+        "Mobile-oriented interface designed for auction workflows.",
+        "Functional interface flows surpassing static screens."
+      ],
+      architectureOverview: "Interactive client-side routing with mock data states to simulate real auction application behavior.",
+      mockupColor: "from-slate-100 to-blue-50/30 border-blue-100",
+      specCodeSnippet: `// Auction Item Card
+const AuctionCard = ({ item, currentBid }) => {
+  return (
+    <div className="p-4 rounded-xl border border-slate-200 bg-white">
+      <img src={item.image} className="w-full h-40 object-cover rounded-lg mb-3" />
+      <h3 className="font-bold text-slate-900">{item.name}</h3>
+      <p className="text-teal-600 font-semibold mt-2">Current Bid: {currentBid}</p>
+      <button className="mt-3 w-full bg-slate-900 text-white py-2 rounded-lg">Place Bid</button>
+    </div>
+  );
+};`
     }
   ] as Project[],
 

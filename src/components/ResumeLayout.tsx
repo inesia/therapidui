@@ -52,7 +52,7 @@ export const ResumeLayout: React.FC<ResumeLayoutProps> = ({ data }) => {
             <p className="flex flex-wrap justify-center gap-x-3 gap-y-1">
               <a href="mailto:irwan1010@gmail.com" className="hover:underline text-black">irwan1010@gmail.com</a> |
               <span>+62 878 7311 6901</span> |
-              <a href="https://rapidui.dev/" target="_blank" rel="noopener noreferrer" className="hover:underline text-black">rapidui.dev</a> |
+              <a href="https://therapidui.netlify.app/" target="_blank" rel="noopener noreferrer" className="hover:underline text-black">therapidui.netlify.app</a> |
               <a href="https://linkedin.com/in/irwandharmawan" target="_blank" rel="noopener noreferrer" className="hover:underline text-black">linkedin.com/in/irwandharmawan</a> |
               <a href="https://github.com/inesia" target="_blank" rel="noopener noreferrer" className="hover:underline text-black">github.com/inesia</a>
             </p>
