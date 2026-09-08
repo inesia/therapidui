@@ -59,6 +59,13 @@ export function Navbar({ onOpenResume, onOpenContact }: NavbarProps) {
 
         {/* Desktop Nav Links */}
         <nav className="hidden md:flex items-center gap-8 text-sm font-medium text-slate-600">
+          <a 
+            href="/portfolio"
+            className="text-teal-800 font-bold hover:text-teal-950 transition-colors cursor-pointer flex items-center gap-1.5"
+          >
+            Portfolio
+            <span className="text-[10px] font-bold px-1.5 py-0.5 bg-teal-50 text-teal-700 rounded-full border border-teal-200">New</span>
+          </a>
           <button 
             onClick={() => scrollToSection('about')}
             className="hover:text-slate-900 transition-colors cursor-pointer"
@@ -116,6 +123,12 @@ export function Navbar({ onOpenResume, onOpenContact }: NavbarProps) {
       {/* Mobile Drawer Menu */}
       {mobileMenuOpen && (
         <div className="md:hidden bg-white/95 backdrop-blur-lg border-b border-slate-200 px-6 py-6 space-y-4 shadow-lg animate-in slide-in-from-top-4 duration-200">
+          <a 
+            href="/portfolio"
+            className="block w-full text-left py-2 font-bold text-teal-800 hover:text-teal-950"
+          >
+            Portfolio & Case Studies ✨
+          </a>
           <button 
             onClick={() => scrollToSection('about')}
             className="block w-full text-left py-2 font-medium text-slate-700 hover:text-slate-900"

@@ -132,6 +132,25 @@ export function FeaturedProjects({ onSelectProject }: FeaturedProjectsProps) {
           </motion.div>
         ))}
       </div>
+
+      {/* View Complete Portfolio Callout */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        className="mt-16 text-center"
+      >
+        <a
+          href="/portfolio"
+          className="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-slate-900 hover:bg-slate-800 text-white font-bold text-sm shadow-md hover:shadow-lg transition-all group"
+        >
+          Explore Complete Portfolio & In-Depth Case Studies
+          <ArrowUpRight className="w-4 h-4 text-teal-400 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+        </a>
+        <p className="text-xs text-slate-400 font-medium mt-3">
+          Detailed case studies with code architecture, live staging URLs, and metrics.
+        </p>
+      </motion.div>
     </section>
   );
 }
