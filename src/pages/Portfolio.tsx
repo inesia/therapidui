@@ -20,14 +20,28 @@ export const Portfolio: React.FC = () => {
 
   // Set document title
   useEffect(() => {
-    document.title = "Portfolio & In-Depth Case Studies — The Rapid UI";
+    document.title = "Selected UI/UX & Front-end Work — The Rapid UI";
     window.scrollTo({ top: 0, behavior: 'instant' });
   }, []);
+
+  const categories = ['All', 'Website & Landing Page', 'Dashboard UI', 'Mobile & PWA', 'Enterprise & B2B'];
 
   // Filtered case studies
   const filteredStudies = useMemo(() => {
     return PORTFOLIO_CASE_STUDIES.filter(study => {
-      const matchesCategory = selectedCategory === 'All' || study.category === selectedCategory;
+      let matchesCategory = false;
+      if (selectedCategory === 'All') {
+        matchesCategory = true;
+      } else if (selectedCategory === 'Website & Landing Page') {
+        matchesCategory = ['Promedia Teknologi', 'Jembatan TNI — Photo & Video Competition', 'Sales Motor Website', 'Landing Page Gadai BPKB', 'Asian Music Games', 'The Botanica Signature', 'Yayasan Terapi Indonesia Sehat', 'Brother Plant', 'Zanira Plant'].includes(study.title);
+      } else if (selectedCategory === 'Dashboard UI') {
+        matchesCategory = ['BSN Digital Sales Toolkit', 'KerjaLagi Pro', 'InvestiHub', 'Dashboard Media Listening', 'Dashboard Monitoring — Bank Socmed'].includes(study.title);
+      } else if (selectedCategory === 'Mobile & PWA') {
+        matchesCategory = ['JANJI — Pinjam Dulu Seratus?', 'Mofish', 'Yamaha Warrior'].includes(study.title);
+      } else if (selectedCategory === 'Enterprise & B2B') {
+        matchesCategory = ['BSN Digital Sales Toolkit', 'KerjaLagi Pro', 'InvestiHub', 'Media Directory', 'Dashboard Media Listening', 'Dashboard Monitoring — Bank Socmed', 'Promedia Teknologi'].includes(study.title);
+      }
+      
       const matchesSearch = 
         study.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
         study.subtitle.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -35,8 +49,6 @@ export const Portfolio: React.FC = () => {
       return matchesCategory && matchesSearch;
     });
   }, [selectedCategory, searchQuery]);
-
-  const categories = ['All', 'Web Application', 'Dashboard UI', 'Mobile & PWA', 'Enterprise & B2B'];
 
   return (
     <div className="min-h-screen bg-[#FCFCFC] text-slate-900 font-sans selection:bg-teal-500/20 selection:text-teal-900 flex flex-col relative overflow-x-hidden">
@@ -97,30 +109,30 @@ export const Portfolio: React.FC = () => {
           </div>
 
           <h1 className="text-3xl sm:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight">
-            Proven Engineering & UI/UX Case Studies
+            Selected UI/UX & Front-end Work
           </h1>
 
           <p className="text-base sm:text-lg text-slate-600 leading-relaxed font-normal">
-            Detailed breakdowns of web applications, high-density dashboards, mobile PWAs, and enterprise systems built with code-first rapid prototyping.
+            A selection of digital products, websites, dashboards, and mobile-first experiences designed to make complex needs clearer, more trustworthy, and easier to use.
           </p>
 
           {/* Quick Stats Highlights */}
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-4 border-t border-slate-200/70">
-            <div className="p-3 bg-white rounded-2xl border border-slate-200/80 shadow-2xs">
+            <div className="p-3 bg-white rounded-2xl border border-slate-200/80 shadow-2xs flex flex-col justify-center">
               <span className="block text-2xl font-extrabold text-slate-900 font-mono">15+</span>
-              <span className="text-[11px] text-slate-500 font-medium">Years UI/UX Exp</span>
+              <span className="text-[11px] text-slate-500 font-medium">Years Experience</span>
             </div>
-            <div className="p-3 bg-white rounded-2xl border border-slate-200/80 shadow-2xs">
-              <span className="block text-2xl font-extrabold text-teal-700 font-mono">100%</span>
-              <span className="text-[11px] text-slate-500 font-medium">Code Prototyped</span>
+            <div className="p-3 bg-white rounded-2xl border border-slate-200/80 shadow-2xs flex flex-col justify-center">
+              <span className="block text-2xl font-extrabold text-teal-700 font-mono">20</span>
+              <span className="text-[11px] text-slate-500 font-medium">Selected Works</span>
             </div>
-            <div className="p-3 bg-white rounded-2xl border border-slate-200/80 shadow-2xs">
-              <span className="block text-2xl font-extrabold text-slate-900 font-mono">1,000+</span>
-              <span className="text-[11px] text-slate-500 font-medium">Portals Powered</span>
+            <div className="p-3 bg-white rounded-2xl border border-slate-200/80 shadow-2xs flex flex-col justify-center">
+              <span className="block text-lg font-extrabold text-slate-900 font-mono">Web</span>
+              <span className="text-[11px] text-slate-500 font-medium">Dashboard & PWA</span>
             </div>
-            <div className="p-3 bg-white rounded-2xl border border-slate-200/80 shadow-2xs">
-              <span className="block text-2xl font-extrabold text-slate-900 font-mono">30+</span>
-              <span className="text-[11px] text-slate-500 font-medium">Enterprise Clients</span>
+            <div className="p-3 bg-white rounded-2xl border border-slate-200/80 shadow-2xs flex flex-col justify-center">
+              <span className="block text-lg font-extrabold text-slate-900 font-mono">ID & INTL</span>
+              <span className="text-[11px] text-slate-500 font-medium">Indonesia & International</span>
             </div>
           </div>
         </section>
@@ -152,7 +164,7 @@ export const Portfolio: React.FC = () => {
                 type="text"
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                placeholder="Search projects, stacks, tags..."
+                placeholder="Search projects, tags..."
                 className="w-full pl-9 pr-4 py-2 rounded-full text-xs bg-white border border-slate-200 focus:outline-none focus:border-teal-600 focus:ring-1 focus:ring-teal-600 transition-all placeholder:text-slate-400"
               />
             </div>
@@ -182,8 +194,14 @@ export const Portfolio: React.FC = () => {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.4, delay: idx * 0.05 }}
-                  onClick={() => setActiveStudy(study)}
-                  className="group bg-white rounded-3xl border border-slate-200/90 overflow-hidden shadow-soft hover:shadow-soft-hover transition-all duration-300 flex flex-col justify-between cursor-pointer transform hover:-translate-y-1"
+                  onClick={() => {
+                    if (study.hasCaseStudy) {
+                      setActiveStudy(study);
+                    }
+                  }}
+                  className={`group bg-white rounded-3xl border border-slate-200/90 overflow-hidden shadow-soft hover:shadow-soft-hover transition-all duration-300 flex flex-col justify-between ${
+                    study.hasCaseStudy ? 'cursor-pointer transform hover:-translate-y-1' : ''
+                  }`}
                 >
                   {/* Visual Mockup Preview Container */}
                   <div className="p-4 sm:p-6 bg-slate-50/60 border-b border-slate-100">
@@ -206,28 +224,26 @@ export const Portfolio: React.FC = () => {
                         {study.title}
                       </h3>
 
-                      <p className="text-xs font-medium text-slate-500 uppercase tracking-wider">
-                        {study.client}
-                      </p>
-
                       <p className="text-slate-600 text-sm leading-relaxed line-clamp-3">
                         {study.executiveSummary}
                       </p>
                     </div>
 
                     {/* Metrics Row */}
-                    <div className="grid grid-cols-3 gap-2 py-3 px-4 rounded-xl bg-slate-50 border border-slate-100">
-                      {study.metrics.map((m, mIdx) => (
-                        <div key={mIdx}>
-                          <span className="block text-sm font-extrabold text-slate-900 font-mono">
-                            {m.value}
-                          </span>
-                          <span className="text-[10px] text-slate-500 font-medium block truncate">
-                            {m.label}
-                          </span>
-                        </div>
-                      ))}
-                    </div>
+                    {study.metrics && study.metrics.length > 0 && (
+                      <div className="grid grid-cols-3 gap-2 py-3 px-4 rounded-xl bg-slate-50 border border-slate-100">
+                        {study.metrics.map((m, mIdx) => (
+                          <div key={mIdx}>
+                            <span className="block text-sm font-extrabold text-slate-900 font-mono">
+                              {m.value}
+                            </span>
+                            <span className="text-[10px] text-slate-500 font-medium block truncate">
+                              {m.label}
+                            </span>
+                          </div>
+                        ))}
+                      </div>
+                    )}
 
                     {/* Tags List */}
                     <div className="flex flex-wrap gap-1.5">
@@ -248,9 +264,15 @@ export const Portfolio: React.FC = () => {
 
                     {/* Card Footer Actions */}
                     <div className="pt-4 border-t border-slate-100 flex items-center justify-between">
-                      <span className="inline-flex items-center gap-1.5 text-xs font-bold text-slate-900 group-hover:text-teal-800 transition-colors">
-                        Read Case Study <ArrowUpRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
-                      </span>
+                      {study.hasCaseStudy ? (
+                        <span className="inline-flex items-center gap-1.5 text-xs font-bold text-slate-900 group-hover:text-teal-800 transition-colors">
+                          Read Case Study <ArrowUpRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                        </span>
+                      ) : (
+                        <span className="inline-flex items-center gap-1.5 text-xs font-medium text-slate-400">
+                          Case Study Coming Soon
+                        </span>
+                      )}
 
                       {study.liveUrl && (
                         <a
@@ -260,7 +282,7 @@ export const Portfolio: React.FC = () => {
                           onClick={(e) => e.stopPropagation()}
                           className="inline-flex items-center gap-1 text-[11px] font-bold text-teal-800 hover:text-teal-900 bg-teal-50 hover:bg-teal-100 px-2.5 py-1 rounded-full border border-teal-200 transition-colors"
                         >
-                          Live Demo <ExternalLink className="w-3 h-3" />
+                          Live Preview <ExternalLink className="w-3 h-3" />
                         </a>
                       )}
                     </div>
@@ -271,51 +293,32 @@ export const Portfolio: React.FC = () => {
           )}
         </section>
 
-        {/* Enterprise Legacy Track Record Section */}
+        {/* Experience Summary Section */}
         <section className="p-8 sm:p-12 rounded-3xl bg-slate-900 text-white space-y-8">
           <div className="max-w-2xl space-y-3">
             <span className="text-xs font-bold text-teal-400 uppercase tracking-widest block">
-              Enterprise Track Record
+              Experience across digital products and platforms
             </span>
             <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight">
-              15+ Years of Designing & Engineering at Scale
+              15+ Years Designing Interfaces That Work in the Real World
             </h2>
             <p className="text-sm text-slate-300 leading-relaxed">
-              From Indonesia's largest media portals to top-tier financial ecosystems and modern AI-augmented PWA prototypes.
+              From public-facing websites to complex internal dashboards, I design practical digital experiences that balance user needs, business objectives, and implementation realities.
             </p>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 pt-4 border-t border-slate-800">
             <div className="space-y-1">
-              <span className="text-xs font-bold text-teal-400 font-mono">detik.com</span>
-              <h4 className="text-sm font-bold text-white">Digital Media Pioneer</h4>
-              <p className="text-xs text-slate-400 leading-relaxed">
-                Front-end prototyping & interface design for high-traffic microsites and internal CMS.
-              </p>
+              <h4 className="text-sm font-bold text-white">Digital Products & Dashboards</h4>
             </div>
-
             <div className="space-y-1">
-              <span className="text-xs font-bold text-teal-400 font-mono">Kompas Gramedia</span>
-              <h4 className="text-sm font-bold text-white">Automotive Media Portals</h4>
-              <p className="text-xs text-slate-400 leading-relaxed">
-                UI/UX and HTML/CSS architecture for otomotifnet.com and corporate digital campaigns.
-              </p>
+              <h4 className="text-sm font-bold text-white">Corporate & Service Websites</h4>
             </div>
-
             <div className="space-y-1">
-              <span className="text-xs font-bold text-teal-400 font-mono">Bank BSI</span>
-              <h4 className="text-sm font-bold text-white">B2B Financial Platforms</h4>
-              <p className="text-xs text-slate-400 leading-relaxed">
-                Complex workflow interfaces for SME Business Value Chain and Go-UMKM financing.
-              </p>
+              <h4 className="text-sm font-bold text-white">E-commerce & Lead Generation</h4>
             </div>
-
             <div className="space-y-1">
-              <span className="text-xs font-bold text-teal-400 font-mono">Ivosights</span>
-              <h4 className="text-sm font-bold text-white">Enterprise CRM & Analytics</h4>
-              <p className="text-xs text-slate-400 leading-relaxed">
-                Omni-channel customer command centers, sentiment analysis, and operational dashboards.
-              </p>
+              <h4 className="text-sm font-bold text-white">Mobile-first PWA Experiences</h4>
             </div>
           </div>
         </section>
@@ -324,10 +327,10 @@ export const Portfolio: React.FC = () => {
         <section className="p-8 sm:p-12 rounded-3xl bg-teal-50 border border-teal-200/80 text-center space-y-6 max-w-3xl mx-auto">
           <div className="space-y-2">
             <h3 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
-              Ready to Accelerate Your Product's Development?
+              Have a digital product or website in mind?
             </h3>
             <p className="text-sm sm:text-base text-slate-600 leading-relaxed max-w-xl mx-auto">
-              Skip static mockups and handoff friction. Get interactive code prototypes, enterprise design systems, and developer-ready front-end architectures.
+              Let's turn your idea, workflow, or existing platform into a clearer and more useful digital experience.
             </p>
           </div>
 
@@ -336,7 +339,7 @@ export const Portfolio: React.FC = () => {
               onClick={() => setIsContactOpen(true)}
               className="px-6 py-3 rounded-full bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs shadow-md transition-colors cursor-pointer"
             >
-              Get in Touch
+              Start a Conversation
             </button>
             <a
               href="/resume"

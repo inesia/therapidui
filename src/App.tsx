@@ -4,19 +4,19 @@ import { Hero } from './components/Hero';
 import { AboutTechStack } from './components/AboutTechStack';
 import { FeaturedProjects } from './components/FeaturedProjects';
 import { Footer } from './components/Footer';
-import { ProjectModal } from './components/ProjectModal';
+import { CaseStudyModal } from './components/portfolio/CaseStudyModal';
 import { ResumeModal } from './components/ResumeModal';
 import { ContactModal } from './components/ContactModal';
-import type { Project } from './data/portfolioData';
+import type { CaseStudy } from './data/portfolioCaseStudies';
 
 function App() {
-  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
+  const [activeStudy, setActiveStudy] = useState<CaseStudy | null>(null);
   const [isResumeOpen, setIsResumeOpen] = useState(false);
   const [isContactOpen, setIsContactOpen] = useState(false);
 
   // Lock body scroll when modals are open
   React.useEffect(() => {
-    if (selectedProject || isResumeOpen || isContactOpen) {
+    if (activeStudy || isResumeOpen || isContactOpen) {
       document.body.style.overflow = 'hidden';
     } else {
       document.body.style.overflow = 'unset';
@@ -24,7 +24,7 @@ function App() {
     return () => {
       document.body.style.overflow = 'unset';
     };
-  }, [selectedProject, isResumeOpen, isContactOpen]);
+  }, [activeStudy, isResumeOpen, isContactOpen]);
 
   return (
     <div className="min-h-screen bg-[#FCFCFC] text-slate-900 font-sans selection:bg-accent-teal/20 selection:text-accent-teal flex flex-col relative overflow-x-hidden">
@@ -44,15 +44,16 @@ function App() {
           }}
         />
         <AboutTechStack />
-        <FeaturedProjects onSelectProject={setSelectedProject} />
+        <FeaturedProjects onSelectProject={setActiveStudy} />
       </main>
 
       <Footer onOpenContact={() => setIsContactOpen(true)} />
 
       {/* Modals */}
-      <ProjectModal 
-        project={selectedProject} 
-        onClose={() => setSelectedProject(null)} 
+      <CaseStudyModal 
+        study={activeStudy} 
+        onClose={() => setActiveStudy(null)} 
+        onContactClick={() => setIsContactOpen(true)}
       />
       <ResumeModal 
         isOpen={isResumeOpen}

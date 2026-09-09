@@ -1,0 +1,208 @@
+﻿<USER_REQUEST>
+Update the content of the existing portfolio page at:
+
+https://therapidui.netlify.app/portfolio
+
+Important constraints:
+- Preserve the current visual design, layout, card components, spacing, grid, filters, navigation, and responsive behavior.
+- Do not redesign the page.
+- Do not add fake metrics, fabricated client results, or unsupported claims.
+- Keep the interface language in English because this is a professional portfolio for potential international and Indonesian clients.
+- Keep copy concise, specific, human, and outcome-oriented. Avoid generic AI phrases such as â€œrevolutionaryâ€, â€œseamless ecosystemâ€, â€œhigh-impactâ€, or â€œcutting-edgeâ€.
+- Replace the current fictional/template-like case studies with the following real selected work.
+- Update the summary counters to reflect the available portfolio: â€œ15+ Years Experienceâ€, â€œ20 Selected Worksâ€, â€œWeb, Dashboard & PWAâ€, and â€œIndonesia & Internationalâ€.
+- Replace the hero title with:
+  â€œSelected UI/UX & Front-end Workâ€
+- Replace the hero description with:
+  â€œA selection of digital products, websites, dashboards, and mobile-first experiences designed to make complex needs clearer, more trustworthy, and easier to use.â€
+
+Professional profile:
+Name: Irwan Dharmawan
+Role: UI/UX Designer & Front-end Developer
+Positioning: I translate complex business needs into clear, trustworthy, and practical digital experiencesâ€”from product flows and responsive interfaces to production-aware front-end delivery.
+Experience: 15+ years across websites, dashboards, digital products, media, banking, service platforms, e-commerce, and PWAs.
+
+Use the existing card schema. For each project, populate:
+- title
+- category
+- year: use â€œSelected Workâ€ when the exact year is not confirmed
+- concise description
+- tags
+- livePreviewUrl when available
+- caseStudyUrl: keep disabled or hide the â€œRead Case Studyâ€ link until a dedicated case-study page exists
+- use the existing project image slot; do not generate replacement imagery unless an image is missing
+
+Portfolio data:
+
+1. BSN Digital Sales Toolkit
+Category: Dashboard UI / Digital Product
+Description: A digital sales toolkit that helps teams connect Sharia financial products with customer business needs through a clearer, step-by-step journey.
+Tags: UI/UX Design, Dashboard, Financial Services, Product Flow
+Live preview: https://tab-produk.netlify.app/
+
+2. JANJI â€” Pinjam Dulu Seratus?
+Category: Product Concept / UX/UI
+Description: A promise-tracking platform that makes informal lending agreements clearer, more transparent, and less awkward to manage.
+Tags: Product Design, UX Writing, Mobile UX, Prototype
+Live preview: https://janji-promises.emergent.host/
+
+3. KerjaLagi Pro
+Category: Dashboard UI / Recruitment Platform
+Description: A recruitment dashboard concept that helps HR teams review candidate information, hiring progress, and priorities in one focused workspace.
+Tags: Dashboard, HR Tech, UX/UI, Data Clarity
+Live preview: https://hirematurity.emergent.host/
+
+4. InvestiHub
+Category: Dashboard UI / Case Management
+Description: A case-management dashboard for tracking insurance claim investigations, assignments, and progress across each review stage.
+Tags: Dashboard, Case Management, Enterprise UX, UI Design
+Live preview: https://investhub.netlify.app/
+
+5. Promedia Teknologi
+Category: Corporate Website / UI/UX
+Description: A corporate website for a digital media and technology ecosystem, structured to clearly communicate its value to publishers, creators, and partners.
+Tags: Corporate Website, Information Architecture, UI/UX, Responsive Design
+
+6. Media Directory
+Category: Platform UX/UI / Information Architecture
+Description: A searchable media directory that helps users discover media outlets by region, category, and publication needs.
+Tags: Search UX, Filter System, Platform Design, Information Architecture
+
+7. Dashboard Media Listening
+Category: Dashboard UI / Data Visualization
+Description: A monitoring dashboard concept that helps communication teams identify trends, sentiment shifts, and emerging issues across public conversations.
+Tags: Dashboard, Data Visualization, Social Listening, Enterprise UX
+
+8. Jembatan TNI â€” Photo & Video Competition
+Category: Campaign Platform / Landing Page
+Description: A campaign platform that combines event information, registration, and submission flows for a national photo and video competition.
+Tags: Campaign Website, Landing Page, Registration Flow, UI/UX
+Live preview: https://jembatanku.netlify.app/
+
+9. Mofish
+Category: Mobile & PWA / Auction Experience
+Description: A mobile-first auction experience for koi fish, designed around product imagery, lot information, and a clear bidding flow.
+Tags: PWA, Mobile UX, Auction Platform, Product Design
+
+10. Sales Motor Website
+Category: Lead Generation / Landing Page
+Description: A Yamaha motorcycle promotional website designed to turn interest into direct WhatsApp conversations through a focused, low-friction journey.
+Tags: Landing Page, Lead Generation, Automotive, Conversion UX
+Live preview: https://motorbaruyamaha.netlify.app/
+
+11. Ottoban Indonesia
+Category: E-commerce UX/UI / Product Finder
+Description: A tyre and wheel finder that simplifies technical vehicle specifications into a more intuitive product-selection journey.
+Tags: E-commerce, Product Finder, Automotive, UX/UI
+Live preview: https://ottoban.netlify.app/
+
+12. Dashboard Monitoring â€” Bank Socmed
+Category: Dashboard UI / Social Intelligence
+Description: A strategic monitoring dashboard combining social, online, and print signals to help teams identify alerts and response priorities.
+Tags: Dashboard, Social Intelligence, Data Visualization, Enterprise UX
+Live preview: https://hub-strategic-46.netlify.app/
+
+13. Landing Page Gadai BPKB
+Category: Lead Generation / Service Website
+Description: A financing service landing page that makes key information, simulation, and consultation paths easier to understand.
+Tags: Landing Page, Financial Services, Conversion UX, Responsive Design
+Live preview: https://danabpkb.netlify.app/
+
+14. Asian Music Games
+Category: Event Website / UI/UX
+Description: A regional event portal with an energetic visual direction and clear paths to event information and registration.
+Tags: Event Website, Landing Page, UI/UX, Responsive Design
+Live preview: https://asianmusicgames.netlify.app/
+
+15. Yamaha Warrior
+Category: Mobile & PWA / Community Engagement
+Description: A mobile-first challenge platform where users can follow activities, share moments, track rewards, and view the leaderboard.
+Tags: PWA, Community Platform, Gamification, Mobile UX
+Live preview: https://y-warior.netlify.app/
+
+16. The Botanica Signature
+Category: Property Landing Page / UI/UX
+Description: A premium property landing page that uses restrained navigation and strong visual storytelling to support high-intent inquiries.
+Tags: Property Website, Landing Page, UI/UX, Premium Brand
+Live preview: https://thebotanicasignaturebogor.com/
+
+17. Yayasan Terapi Indonesia Sehat
+Category: Service Website / UX/UI
+Description: A service website for therapy and home care, designed to make services, credibility, and booking access feel clear and reassuring.
+Tags: Service Website, Healthcare UX, Responsive Design, UI/UX
+Live preview: http://kangirwantherapispijat.com/
+
+18. Kawi Asia
+Category: E-commerce / Brand & UX/UI
+Description: An e-commerce experience that brings heritage products into a modern shopping journey through clear collections, storytelling, and purchase paths.
+Tags: E-commerce, Brand Experience, UI/UX, Responsive Design
+Live preview: https://kawi.asia/
+
+19. Brother Plant
+Category: Export Catalogue / UI/UX
+Description: A visual-first digital catalogue for rare plants, designed to help local and international collectors explore collections and make inquiries.
+Tags: Catalogue Website, Export, UI/UX, Product Presentation
+Live preview: https://brotherplant.netlify.app/
+
+20. Zanira Plant
+Category: Export Website / Brand & UX/UI
+Description: A tropical nursery website that highlights collection quality, credibility, and direct inquiry paths for international collectors.
+Tags: Export Website, Brand Experience, UI/UX, Responsive Design
+Live preview: https://zaniraplant.com/
+
+Filter mapping:
+- Website & Landing Page: Promedia Teknologi, Jembatan TNI, Sales Motor Website, Landing Page Gadai BPKB, Asian Music Games, The Botanica Signature, Yayasan Terapi Indonesia Sehat, Brother Plant, Zanira Plant
+- Dashboard UI: BSN Digital Sales Toolkit, KerjaLagi Pro, InvestiHub, Dashboard Media Listening, Dashboard Monitoring â€” Bank Socmed
+- Mobile & PWA: JANJI, Mofish, Yamaha Warrior
+- Enterprise & B2B: BSN Digital Sales Toolkit, KerjaLagi Pro, InvestiHub, Media Directory, Dashboard Media Listening, Dashboard Monitoring â€” Bank Socmed, Promedia Teknologi
+
+Replace the dark portfolio summary section with:
+
+Eyebrow:
+â€œExperience across digital products and platformsâ€
+
+Title:
+â€œ15+ Years Designing Interfaces That Work in the Real Worldâ€
+
+Description:
+â€œFrom public-facing websites to complex internal dashboards, I design practical digital experiences that balance user needs, business objectives, and implementation realities.â€
+
+Highlight areas:
+- Digital Products & Dashboards
+- Corporate & Service Websites
+- E-commerce & Lead Generation
+- Mobile-first PWA Experiences
+
+Final CTA:
+Title: â€œHave a digital product or website in mind?â€
+Description: â€œLetâ€™s turn your idea, workflow, or existing platform into a clearer and more useful digital experience.â€
+Primary CTA: â€œStart a Conversationâ€
+CTA link: keep the current contact behavior.
+
+Before completing:
+1. Verify every live-preview URL.
+2. Ensure cards with no URL do not show a broken preview button.
+3. Keep all content readable at mobile widths.
+4. Do not claim results, metrics, client scale, or project outcomes unless explicitly included above.
+
+img please use : public\portfolio
+</USER_REQUEST>
+<ADDITIONAL_METADATA>
+The current local time is: 2026-09-08T22:11:47+07:00.
+
+The user's current state is as follows:
+Active Document: c:\xampp\htdocs\ricky-therapist\index.html (LANGUAGE_HTML)
+Cursor is on line: 72
+Other open documents:
+- c:\xampp\htdocs\ricky-therapist\sitemap.xml (LANGUAGE_XML)
+- c:\xampp\htdocs\ricky-therapist\robots.txt (LANGUAGE_UNSPECIFIED)
+- c:\xampp\htdocs\ricky-therapist\index.html (LANGUAGE_HTML)
+Browser State:
+  Page C29C3E8FD050A6B22A0047143BC77AAF (Ricky Therapy & Massage | Jasa Pijat Panggilan Tangerang Kota Profesional 90 Menit) - file:///C:/xampp/htdocs/ricky-therapist/index.html [ACTIVE]
+    Viewport: 2195x1108, Page Height: 5904
+Running terminal commands:
+- npm run dev (in c:\xampp\htdocs\inesia.dev, running for 4h57m6s)
+</ADDITIONAL_METADATA>
+<USER_SETTINGS_CHANGE>
+The user changed setting `Model Selection` from Gemini 3.8 Flash (Medium) to Gemini 3.1 Pro (High). No need to comment on this change if the user doesn't ask about it. If reporting what model you are, please use a human readable name instead of the exact string.
+</USER_SETTINGS_CHANGE>
